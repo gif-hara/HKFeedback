@@ -9,9 +9,12 @@ namespace HKFeedback.Actions
         [SerializeField]
         private Transform parent = null!;
 
+        [SerializeField]
+        private bool worldPositionStays = true;
+
         public UniTask PlayAsync(T context, CancellationToken cancellationToken)
         {
-            context.Provide().SetParent(parent);
+            context.Provide().SetParent(parent, worldPositionStays);
             return UniTask.CompletedTask;
         }
     }
