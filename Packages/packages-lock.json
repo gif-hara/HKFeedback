@@ -7,6 +7,13 @@
       "dependencies": {},
       "hash": "a9e27c03d411d2fca01cc7410c24c97cd77cb539"
     },
+    "com.mackysoft.serializereference-extensions": {
+      "version": "https://github.com/gif-hara/Unity-SerializeReferenceExtensions.git?path=Assets/MackySoft/MackySoft.SerializeReferenceExtensions#feature-generic-class",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "cd6655624cab29aa0a5e0a8d63d50bbe2c8080d8"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.10",
       "depth": 0,
