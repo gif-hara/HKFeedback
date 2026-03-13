@@ -1,9 +1,11 @@
+using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace HKFeedback.Actions
 {
+    [Serializable]
     public class Log<T> : IFeedback<T>
     {
         [SerializeField]

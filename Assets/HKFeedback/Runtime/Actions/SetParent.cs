@@ -1,9 +1,11 @@
+using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace HKFeedback.Actions
 {
+    [Serializable]
     public class SetParent<T> : IFeedback<T> where T : IProvider<Transform>
     {
         [SerializeField]
