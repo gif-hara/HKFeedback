@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using HKFeedback.Editor.GraphViewSystems.Nodes;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -25,10 +26,12 @@ namespace HKFeedback.Editor.GraphViewSystems
             background.StretchToParentSize();
             background.SendToBack();
 
-            var path = "Assets/HKFeedback/Editor/Settings/HKFeedbackGraphView.uss";
+            var path = "Assets/HKFeedback/Editor/GraphView/Settings/HKFeedbackGraphView.uss";
             var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>(path);
             Assert.IsNotNull(styleSheet, $"{path} not found");
             styleSheets.Add(styleSheet);
+
+            AddElement(new StartNode());
         }
 
         public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)
