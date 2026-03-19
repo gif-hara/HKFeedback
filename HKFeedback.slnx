@@ -1,5 +1,5 @@
 ﻿<Solution>
   <Project Path="Example.csproj" />
-  <Project Path="HKFeedback.Editor.csproj" />
   <Project Path="HKFeedback.csproj" />
+  <Project Path="HKFeedback.Editor.csproj" />
 </Solution>
