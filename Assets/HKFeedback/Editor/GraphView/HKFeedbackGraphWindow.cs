@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace HKFeedback.Editor
+namespace HKFeedback.Editor.GraphViewSystems
 {
     public class HKFeedbackGraphWindow : EditorWindow
     {

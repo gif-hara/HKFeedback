@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.UIElements;
 
-namespace HKFeedback.Editor
+namespace HKFeedback.Editor.GraphViewSystems
 {
     public class HKFeedbackGraphView : GraphView
     {
