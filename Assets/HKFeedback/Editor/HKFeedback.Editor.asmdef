@@ -1,3 +1,14 @@
 {
-	"name": "HKFeedback.Editor"
+    "name": "HKFeedback.Editor",
+    "rootNamespace": "HKFeedback.Editor",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
