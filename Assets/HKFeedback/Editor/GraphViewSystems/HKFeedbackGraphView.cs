@@ -26,7 +26,7 @@ namespace HKFeedback.Editor.GraphViewSystems
             background.StretchToParentSize();
             background.SendToBack();
 
-            var path = "Assets/HKFeedback/Editor/GraphView/Settings/HKFeedbackGraphView.uss";
+            var path = "Assets/HKFeedback/Editor/GraphViewSystems/Settings/HKFeedbackGraphView.uss";
             var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>(path);
             Assert.IsNotNull(styleSheet, $"{path} not found");
             styleSheets.Add(styleSheet);
