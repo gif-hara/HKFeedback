@@ -1,7 +1,0 @@
-VisualElement {}
-GridBackground {
-    --grid-background-color:rgb(90,90,90);
-    --line-color:rgba(80,80,80,0.5);
-    --thick-line-color:rgba(40,40,40,0.5);
-    --spacing:20;
-}
