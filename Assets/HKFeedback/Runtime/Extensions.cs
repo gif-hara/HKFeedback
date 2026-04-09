@@ -29,5 +29,14 @@ namespace HKFeedback.Extensions
                 await feedback.PlayAsync(context, cancellationToken);
             }
         }
+
+        public static bool EvaluateSafe<TContext>(this ICondition<TContext> condition, TContext context)
+        {
+            if (condition == null)
+            {
+                return true;
+            }
+            return condition.Evaluate(context);
+        }
     }
 }
