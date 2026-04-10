@@ -9,10 +9,10 @@ namespace HKFeedback.Actions
     [Serializable]
     public class ConditionFeedback<T> : IFeedback<T>
     {
-        [SerializeField]
+        [SerializeReference, SubclassSelector]
         private ICondition<T> condition;
 
-        [SerializeField]
+        [SerializeReference, SubclassSelector]
         private IFeedback<T>[] feedbacks;
 
         public UniTask PlayAsync(T context, CancellationToken cancellationToken)
