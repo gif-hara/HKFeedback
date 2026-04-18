@@ -13,7 +13,8 @@ namespace HKFeedback.Actions
 
         public UniTask PlayAsync(T context, CancellationToken cancellationToken)
         {
-            return feedback.PlayAsync(context, cancellationToken);
+            feedback.PlayAsync(context, cancellationToken).Forget();
+            return UniTask.CompletedTask;
         }
     }
 }
