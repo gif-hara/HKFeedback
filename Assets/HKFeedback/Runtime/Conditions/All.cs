@@ -6,7 +6,7 @@ namespace HKFeedback.Conditions
     [Serializable]
     public class All<TContext> : ICondition<TContext>
     {
-        [SerializeField]
+        [SerializeReference, SubclassSelector]
         private ICondition<TContext>[] conditions;
 
         public bool Evaluate(TContext context)
