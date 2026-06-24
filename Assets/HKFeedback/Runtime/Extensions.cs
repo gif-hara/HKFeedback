@@ -30,11 +30,11 @@ namespace HKFeedback.Extensions
             }
         }
 
-        public static bool EvaluateSafe<TContext>(this ICondition<TContext> condition, TContext context)
+        public static bool EvaluateSafe<TContext>(this ICondition<TContext> condition, TContext context, bool defaultValue = true)
         {
             if (condition == null)
             {
-                return true;
+                return defaultValue;
             }
             return condition.Evaluate(context);
         }
