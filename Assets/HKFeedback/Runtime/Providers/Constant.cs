@@ -9,6 +9,10 @@ namespace HKFeedback.Providers
         [SerializeField]
         private TContext context;
 
+        public Constant()
+        {
+        }
+
         public Constant(TContext context)
         {
             this.context = context;
