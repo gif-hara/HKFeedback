@@ -21,7 +21,7 @@ namespace HKFeedback.Actions
         }
     }
 
-    [Serializable] public sealed class SubFeedbackGameObject<TContext> : SubFeedbackAsync<IProvider<GameObject>, TContext> { }
+    [Serializable] public sealed class SubFeedbackGameObject<TContext> : SubFeedbackAsync<GameObject, TContext> { }
     [Serializable] public sealed class SubFeedbackTransform<TContext> : SubFeedbackAsync<Transform, TContext> { }
     [Serializable] public sealed class SubFeedbackRectTransform<TContext> : SubFeedbackAsync<RectTransform, TContext> { }
     [Serializable] public sealed class SubFeedbackParticleSystem<TContext> : SubFeedbackAsync<ParticleSystem, TContext> { }
