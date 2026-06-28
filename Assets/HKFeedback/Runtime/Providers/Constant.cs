@@ -4,7 +4,7 @@ using UnityEngine;
 namespace HKFeedback.Providers
 {
     [Serializable]
-    public class Constant<TContext> : IProvider<TContext>
+    public class Constant<TContext> : IProvider<TContext>, IProvider<IProvider<TContext>>
     {
         [SerializeField]
         private TContext context;
@@ -18,6 +18,8 @@ namespace HKFeedback.Providers
             this.context = context;
         }
 
-        public TContext Provide() => context;
+        TContext IProvider<TContext>.Provide() => context;
+
+        IProvider<TContext> IProvider<IProvider<TContext>>.Provide() => this;
     }
 }
