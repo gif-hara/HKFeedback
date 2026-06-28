@@ -7,7 +7,7 @@ using UnityEngine;
 namespace HKFeedback.Actions
 {
     [Serializable]
-    public abstract class SubFeedback<TNewContext, TContext> : AsyncFeedback<TContext>
+    public abstract class SubFeedbackAsync<TNewContext, TContext> : AsyncFeedback<TContext>
     {
         [SerializeReference, SubclassSelector]
         private IProvider<TNewContext> provider = null!;
@@ -21,6 +21,10 @@ namespace HKFeedback.Actions
         }
     }
 
-    [Serializable]
-    public sealed class SubFeedbackGameObject<TContext> : SubFeedback<GameObject, TContext> { }
+    [Serializable] public sealed class SubFeedbackGameObject<TContext> : SubFeedbackAsync<GameObject, TContext> { }
+    [Serializable] public sealed class SubFeedbackTransform<TContext> : SubFeedbackAsync<Transform, TContext> { }
+    [Serializable] public sealed class SubFeedbackRectTransform<TContext> : SubFeedbackAsync<RectTransform, TContext> { }
+    [Serializable] public sealed class SubFeedbackParticleSystem<TContext> : SubFeedbackAsync<ParticleSystem, TContext> { }
+    [Serializable] public sealed class SubFeedbackRigidbody<TContext> : SubFeedbackAsync<Rigidbody, TContext> { }
+    [Serializable] public sealed class SubFeedbackRigidbody2D<TContext> : SubFeedbackAsync<Rigidbody2D, TContext> { }
 }
