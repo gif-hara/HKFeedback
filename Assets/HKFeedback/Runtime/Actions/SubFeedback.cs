@@ -13,15 +13,15 @@ namespace HKFeedback.Actions
         private IProvider<TNewContext> provider = null!;
 
         [SerializeReference, SubclassSelector]
-        private IFeedback<TNewContext>[] feedbacks;
+        private IFeedback<IProvider<TNewContext>>[] feedbacks;
 
         protected override UniTask PlayInternalAsync(TContext context, CancellationToken cancellationToken)
         {
-            return feedbacks.PlayAsync(provider.Provide(), cancellationToken);
+            return feedbacks.PlayAsync(provider, cancellationToken);
         }
     }
 
-    [Serializable] public sealed class SubFeedbackGameObject<TContext> : SubFeedbackAsync<IProvider<GameObject>, TContext> { }
+    [Serializable] public sealed class SubFeedbackGameObject<TContext> : SubFeedbackAsync<GameObject, TContext> { }
     [Serializable] public sealed class SubFeedbackTransform<TContext> : SubFeedbackAsync<Transform, TContext> { }
     [Serializable] public sealed class SubFeedbackRectTransform<TContext> : SubFeedbackAsync<RectTransform, TContext> { }
     [Serializable] public sealed class SubFeedbackParticleSystem<TContext> : SubFeedbackAsync<ParticleSystem, TContext> { }
