@@ -27,4 +27,5 @@ namespace HKFeedback.Actions
     [Serializable] public sealed class SubFeedbackParticleSystem<TContext> : SubFeedbackAsync<ParticleSystem, TContext> { }
     [Serializable] public sealed class SubFeedbackRigidbody<TContext> : SubFeedbackAsync<Rigidbody, TContext> { }
     [Serializable] public sealed class SubFeedbackRigidbody2D<TContext> : SubFeedbackAsync<Rigidbody2D, TContext> { }
+    [Serializable] public sealed class SubFeedbackAnimator<TContext> : SubFeedbackAsync<Animator, TContext> { }
 }
