@@ -3,6 +3,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using HKFeedback.Extensions;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace HKFeedback.Actions
 {
@@ -28,4 +29,6 @@ namespace HKFeedback.Actions
     [Serializable] public sealed class SubFeedbackRigidbody<TContext> : SubFeedbackAsync<Rigidbody, TContext> { }
     [Serializable] public sealed class SubFeedbackRigidbody2D<TContext> : SubFeedbackAsync<Rigidbody2D, TContext> { }
     [Serializable] public sealed class SubFeedbackAnimator<TContext> : SubFeedbackAsync<Animator, TContext> { }
+    [Serializable] public sealed class SubFeedbackGraphic<TContext> : SubFeedbackAsync<Graphic, TContext> { }
+    [Serializable] public sealed class SubFeedbackCanvasGroup<TContext> : SubFeedbackAsync<CanvasGroup, TContext> { }
 }
