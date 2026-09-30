@@ -31,4 +31,5 @@ namespace HKFeedback.Actions
     [Serializable] public sealed class SubFeedbackAnimator<TContext> : SubFeedbackAsync<Animator, TContext> { }
     [Serializable] public sealed class SubFeedbackGraphic<TContext> : SubFeedbackAsync<Graphic, TContext> { }
     [Serializable] public sealed class SubFeedbackCanvasGroup<TContext> : SubFeedbackAsync<CanvasGroup, TContext> { }
+    [Serializable] public sealed class SubFeedbackSelectable<TContext> : SubFeedbackAsync<Selectable, TContext> { }
 }
